@@ -62,9 +62,11 @@ img {
 }
 
 .gradient {
-  background: linear-gradient(90deg,
-      rgba(255, 23, 228, 1) 0%,
-      rgba(134, 251, 251, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 23, 228, 1) 0%,
+    rgba(134, 251, 251, 1) 100%
+  );
   height: 2px;
 }
 
@@ -286,6 +288,26 @@ footer ul {
   #projects .article2 ul {
     justify-content: flex-start;
   }
+  .article3 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  #projects .article3 img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+
+  .article3 .text {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+  }
+
+  #projects .article3 ul {
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 800px) {
@@ -300,3 +322,4 @@ footer ul {
     margin-right: auto;
   }
 }
+
